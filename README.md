@@ -1,4 +1,4 @@
-# Evaluation-of-AI-Threat-Modeling-Techniques
+# AI脅威モデリング手法の評価
 
 ## 章立て（仮）
 1. はじめに
