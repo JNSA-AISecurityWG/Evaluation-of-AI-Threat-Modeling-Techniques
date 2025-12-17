@@ -15,3 +15,6 @@
 5. 評価結果
 6. 議論
 7. まとめ
+
+## ライセンス
+本ドキュメントは **[Creative Commons Attribution-Share Alike v4.0](https://creativecommons.org/licenses/by-sa/4.0/)** ライセンスのもとに公開しています。
