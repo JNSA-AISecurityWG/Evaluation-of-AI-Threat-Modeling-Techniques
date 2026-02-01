@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram name="Page-1" id="lUtEDzO_8x7B3xcNrVlX">
+    <mxGraphModel dx="1477" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-11" value="AITravel&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;App&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="430" y="420" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-12" value="Customer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-13" value="3rd Party&lt;br&gt;Hotel booking API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-14" value="3rd Party&lt;br&gt;Air ticket booking API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-15" value="Send travel plan&lt;br&gt;Receive air ticket list&lt;br&gt;Send reservation request&lt;br&gt;Receive reservation result" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="1sJATjjeEBjUD7WCWSDh-14" target="1sJATjjeEBjUD7WCWSDh-11">
+          <mxGeometry x="0.2725" y="-14" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="540" as="sourcePoint" />
+            <mxPoint x="440" y="510" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-16" value="Send travel plan&lt;br&gt;Receive hotel list&lt;br&gt;Send reservation request&lt;br&gt;Receive reservation result" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="1sJATjjeEBjUD7WCWSDh-13" target="1sJATjjeEBjUD7WCWSDh-11">
+          <mxGeometry x="-0.5477" y="-23" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="752" as="sourcePoint" />
+            <mxPoint x="527" y="620" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-17" value="Login&lt;div&gt;Send travel preferences&lt;/div&gt;&lt;div&gt;Receive travel plan&lt;br&gt;Send reservation request&lt;br&gt;Receive reservation result&lt;br&gt;Send payment request&lt;br&gt;Receive payment result&lt;br&gt;Manage bookings&lt;/div&gt;" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="1sJATjjeEBjUD7WCWSDh-12" target="1sJATjjeEBjUD7WCWSDh-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="490" as="sourcePoint" />
+            <mxPoint x="490" y="440" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-21" value="3rd Party&lt;br&gt;Payment API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-23" value="Send payment request&lt;br&gt;Receive payment result" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="1sJATjjeEBjUD7WCWSDh-11" target="1sJATjjeEBjUD7WCWSDh-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="480" as="sourcePoint" />
+            <mxPoint x="750" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-25" value="3rd Party&lt;br&gt;LLM API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1sJATjjeEBjUD7WCWSDh-27" value="Send travel preferences&lt;br&gt;Receive travel plan" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="1sJATjjeEBjUD7WCWSDh-11" target="1sJATjjeEBjUD7WCWSDh-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="380" as="sourcePoint" />
+            <mxPoint x="550" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
