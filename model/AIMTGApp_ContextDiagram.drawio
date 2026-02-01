@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram name="Page-1" id="lUtEDzO_8x7B3xcNrVlX">
+    <mxGraphModel dx="1326" dy="919" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FQAlF-kHC54rvOggc8zW-1" value="AIMTGApp" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="390" y="430" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-2" value="Customer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-3" value="3rd Party&lt;br&gt;LLM API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-4" value="3rd Party&lt;br&gt;Transcription API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-5" value="Transcribe audio recording data" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="FQAlF-kHC54rvOggc8zW-4" target="FQAlF-kHC54rvOggc8zW-1">
+          <mxGeometry x="-0.1517" y="-20" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="550" as="sourcePoint" />
+            <mxPoint x="400" y="520" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-6" value="Summarize transcription text" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="FQAlF-kHC54rvOggc8zW-3" target="FQAlF-kHC54rvOggc8zW-1">
+          <mxGeometry x="-0.0006" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="762" as="sourcePoint" />
+            <mxPoint x="487" y="630" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-7" value="Login&lt;div&gt;Send audio recording data&lt;/div&gt;&lt;div&gt;Receive transcription text&lt;br&gt;Receive summarized result&lt;/div&gt;" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="FQAlF-kHC54rvOggc8zW-2" target="FQAlF-kHC54rvOggc8zW-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-8" value="&lt;span style=&quot;font-size: 11px; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;External&lt;br&gt;Summarized Result&lt;br&gt;&lt;/span&gt;&amp;nbsp;Recipients" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-9" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FQAlF-kHC54rvOggc8zW-8" target="FQAlF-kHC54rvOggc8zW-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="410" as="sourcePoint" />
+            <mxPoint x="330" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FQAlF-kHC54rvOggc8zW-10" value="Receive summarized result" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FQAlF-kHC54rvOggc8zW-9">
+          <mxGeometry x="-0.0015" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
