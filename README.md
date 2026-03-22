@@ -1,4 +1,4 @@
-# AI脅威モデリング手法の評価
+# AIを利用したシステムに対する脅威モデリング手法の評価
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 本ドキュメントは、[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa] ライセンスのもとに公開しています。
