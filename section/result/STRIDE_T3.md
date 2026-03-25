@@ -1,5 +1,7 @@
 # STRIDE
 ## 内部にAI機能を有するアプリケーション
+### 信頼境界
+![](../../image/result/FactoryQualityApp_DFD_STRIDE_T3.drawio.png)
 ### STRIDEテーブル
 #### TB1
 
@@ -58,6 +60,8 @@
 LOW: <3, MID: 4<=6, HIGH: 7<=9
 
 ## 外部のLLMを用いたアプリケーション
+### 信頼境界
+![](../../image/result/AIMTGApp_DFD_STRIDE_T3.drawio.png)
 ### STRIDEテーブル
 #### TB1
 
@@ -119,6 +123,8 @@ LOW: <3, MID: 4<=6, HIGH: 7<=9
 LOW: <3, MID: 4<=6, HIGH: 7<=9
 
 ## エージェント型AIを用いたアプリケーション
+### 信頼境界
+![](../../image/result/AITravelApp_DFD_STRIDE_T3.drawio.png)
 ### STRIDEテーブル
 #### TB1
 
