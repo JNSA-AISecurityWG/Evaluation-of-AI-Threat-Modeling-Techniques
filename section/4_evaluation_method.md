@@ -131,7 +131,7 @@ R = P × I
 | 3. | | | | | |
 
 ## 参考文献
-1. AI Exchange, https://owaspai.org
-1. 0\. AI Security Overview | AI Exchange, https://owaspai.org/docs/ai_security_overview/#periodic-table-of-ai-security
-1. Agentic Security Initiative - OWASP Gen AI Security Project, https://genai.owasp.org/initiatives/agentic-security-initiative/
-1. Agentic AI - OWASP Lists Threats and Mitigations, https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/ 
+1. OWASP Foundation, Inc., AI Exchange, https://owaspai.org (2026年3月28日 取得)
+1. OWASP Foundation, Inc., 0\. AI Security Overview | AI Exchange, https://owaspai.org/docs/ai_security_overview/#periodic-table-of-ai-security (2026年3月28日 取得)
+1. OWASP Foundation, Inc., Agentic Security Initiative - OWASP Gen AI Security Project, https://genai.owasp.org/initiatives/agentic-security-initiative/ (2026年3月28日 取得)
+1. OWASP Foundation, Inc., Agentic AI - OWASP Lists Threats and Mitigations, https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/ (2026年3月28日 取得)
