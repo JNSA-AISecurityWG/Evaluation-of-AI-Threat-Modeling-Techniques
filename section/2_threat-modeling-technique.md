@@ -192,7 +192,7 @@ MAESTRO を活用するにあたり、OWASP の Agentic Security Initiative（AS
 4章では、MAESTRO の手順のうち「DFD に対する脅威の特定」のステップで、この T1–T17 の詳細脅威モデルを適用しています。
 つまり、MAESTRO の7レイヤーによる分解とレイヤー別・クロスレイヤー脅威の分析に、ASIの17脅威を組み合わせることで、エージェント型AIシステムの脅威を具体的に洗い出しています。
 
-以下に、Agentic AI – Threats and Mitigations（Version 1.1）の Detailed Threat Model で定義されるT1–T17の一覧を示します。
+以下に、Agentic AI – Threats and Mitigations（Version 1.1）[3]の Detailed Threat Model で定義されるT1–T17の一覧を示します。
 
 | 識別子 | 脅威名（英語） | 概要 |
 | :--- | :--- | :--- |
