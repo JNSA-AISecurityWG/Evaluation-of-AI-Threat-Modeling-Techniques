@@ -10,6 +10,9 @@
 * [MAESTRO結果詳細](/section/result/MAESTRO_T1.md)
 
 ### チーム2
+* [STRIDE結果詳細](/section/result/STRIDE_T2.md)
+* [STRIDE＋AI結果詳細](/section/result/STRIDE_AI_T2.md)
+* [MAESTRO結果詳細](/section/result/MAESTRO_T2.md)
 
 ### チーム3
 
