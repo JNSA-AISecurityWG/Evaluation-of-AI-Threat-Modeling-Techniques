@@ -19,8 +19,8 @@
 | S | Mutual TLS (mTLS) authentication between the API Gateway and the inference process | An unauthorized process impersonates the evaluation process (Evaluate Product Image) and sends fake evaluation results |
 | T | Implement encryption of communications<br />+<br />Implementation of Adversarial Training and application of a preprocessing filter to input images | Rewrite the "Evaluation result" judged by the AI before it reaches the management component<br />+<br />Add noise to an image to make a defective product be misrecognized as a good one |
 | R | Centrally manage the execution logs of the evaluation process<br />+<br />Introduction of XAI (explainable AI) technology and logging of the inputs and confidence scores at inference time | No trace remains that the AI's evaluation process was executed, so responsibility for a misjudgment cannot be traced<br />+<br />When the AI misjudges, the basis for the judgment (explainability) — why it arrived at that output — cannot be explained |
-| I | Unencrypted "Customer data" flowing over the internal network is intercepted | Encryption of internal communications, suppression of unnecessary internal data transfers |
-| D | Send excessive requests to the evaluation process to exhaust resources | Throttling by the API Gateway, introduction of queue processing |
+| I | Encryption of internal communications, suppression of unnecessary internal data transfers | Unencrypted "Customer data" flowing over the internal network is intercepted |
+| D | Throttling by the API Gateway, introduction of queue processing | Send excessive requests to the evaluation process to exhaust resources |
 | E |                                                              |                                                              |
 
 #### TB3
@@ -32,7 +32,7 @@
 | R | Enabling of audit logs for storage operations | There is no record of who uploaded or changed images and when, so unauthorized operations cannot be identified |
 | I | Settings that block public access, encryption (server-side encryption) | A misconfiguration exposes the "Product Images" folder externally, leaking the state of the production line |
 | D | Setting of storage quotas, monitoring and alert notifications | Deliberately exhaust the storage capacity to obstruct the saving of images from the line camera |
-| E | Exploit a vulnerability in the I/O process to access other database files on the same server | Minimization of privileges |
+| E | Minimization of privileges | Exploit a vulnerability in the I/O process to access other database files on the same server |
 
 ### Risk Assessment and Threats
 
