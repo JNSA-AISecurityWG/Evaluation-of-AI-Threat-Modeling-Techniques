@@ -35,20 +35,20 @@ This document has been created by the members of the NPO Japan Network Security 
 
 ### Project Member List (in no particular order)
 #### Working Group Leader
-* 服部 祐一 (株式会社セキュアサイクル, Leader, JNSA – Research Division – AI Security Working Group)
+* Yuichi Hattori(Secure Cycle Inc., Leader, JNSA – Research Division – AI Security Working Group)
 
 #### Working Group Members (in Japanese alphabetical order)
-* 安達 康平(株式会社セキュアサイクル)
-* 五十嵐 裕(株式会社ギブリー)
-* 砂金 善弘(株式会社セキュアサイクル)
-* 伊東 道明(株式会社ChillStack)
-* 榎本 祐樹(フューチャーセキュアウェイブ株式会社)
-* 倉地 伸明(富士ソフト株式会社)
-* 庄司 勝哉(株式会社ラック)
-* 野田 俊夫(アドソル日進株式会社)
-* 濵村 遼成(株式会社セキュアサイクル)
-* 松永 昌浩(セコム株式会社)
-* 松山 保(株式会社ヌーラボ)
+* Kohei Adachi(Secure Cycle Inc.)
+* Yu Ikarashi(Givery, Inc.)
+* Yoshihiro Isago(Secure Cycle Inc.)
+* Michiaki Ito(ChillStack, Inc.)
+* Yuki Enomoto(Future Secure Wave, Inc.)
+* Nobuaki Kurachi(FUJI SOFT INCORPORATED)
+* Katsuya Shoji(LAC Co., Ltd.)
+* Toshio Noda(Ad-Sol Nissin Corporation)
+* Ryosei Hamamura(Secure Cycle Inc.)
+* Masahiro Matsunaga(SECOM CO., LTD.)
+* Tamotsu Matsuyama(Nulab Inc.)
 
 ## Related Organizations
 
