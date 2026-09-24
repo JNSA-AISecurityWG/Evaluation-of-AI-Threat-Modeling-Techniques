@@ -62,3 +62,7 @@ NPO日本ネットワークセキュリティ協会は、ネットワーク社�
 
 ## お問い合わせ先
 本ドキュメントに関する質問、改善や要望等は、本GitHubリポジトリのIssueにてご連絡ください。
+
+## 言語 / Languages
+- [日本語版 (Japanese)](/README.md)
+- [English version](/README.en.md)

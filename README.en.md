@@ -62,3 +62,7 @@ This document is published under the [Creative Commons Attribution-Share Alike v
 
 ## Contact
 For questions, improvements, requests, and the like regarding this document, please contact us through the Issues of this GitHub repository.
+
+## 言語 / Languages
+- [日本語版 (Japanese)](/README.md)
+- [English version](/README.en.md)
