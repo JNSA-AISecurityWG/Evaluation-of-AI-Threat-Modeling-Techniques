@@ -21,6 +21,7 @@
 * STRIDE
 * STRIDE+AI
 * MAESTRO
+* PHANTOM-B
 3. [対象とする脅威モデル](/section/3_threat-model.md)
 * 内部にAI機能を有するアプリケーション
 * 外部のLLMを用いたアプリケーション
