@@ -223,6 +223,72 @@ MAESTROの特徴として、単一のレイヤーだけでなく、レイヤー�
 | **データ漏洩**(Data Leakage) | ある層の機密データが、別の層のプロセス等を通じて外部に露出することである。 | 特定の層で保持されている機密情報が、他の層を経由して漏洩する |
 | **目標不整合の連鎖**(Goal Misalignment Cascades) | 1つのエージェントで発生した目標の不整合が、相互作用を通じて他のエージェントへ伝播する | L2でのデータポイズニングにより目標が歪んだエージェントが、エコシステム内の他エージェントにその影響を広める |
 
+---
+
+## PHANTOM-B
+### PHANTOM-Bとは
+PHANTOM-Bは、脅威モデリングの第一人者であるAdam Shostackが2026年7月にホワイトペーパー「PHANTOM-B: A STRIDE Analog for LLMs」として公開した、LLMを組み込んだシステム向けの脅威モデリング手法です[12][13]。  
+STRIDEと同様に、8つの脅威カテゴリの頭文字を並べた覚えやすい略語で、「このシステムで何がうまくいかなくなり得るか(What can go wrong?)」という問いに答えるための脅威列挙の枠組みです。
+
+MITRE ATLASやNIST AI RMFのような網羅性を重視した体系や、OWASP Top 10 for LLMのような脆弱性リストに対し、PHANTOM-Bは「開発・プロダクトチームが自ら制御できること」に焦点を当て、短時間で繰り返し実施できる軽量な手法として設計されています。
+
+### PHANTOM-Bの8つの脅威カテゴリ
+
+| 脅威カテゴリ | 説明 | 具体例 |
+| :--- | :--- | :--- |
+| **P: Prompt injection**<br>プロンプトインジェクション | 敵対的な入力が命令として解釈される。直接型、LLMが読み込むコンテンツに埋め込まれた間接型、複数メッセージにまたがる多段型を含む | Webページに隠された「特定のものを推奨せよ」という指示を要約LLMが実行する。経費精算システムで、添付内容に埋め込まれた文章によりLLMが規程外の経費を承認する |
+| **H: Hallucination**<br>ハルシネーション | 事実・計算・常識と矛盾する出力。 | 存在しない参考文献の生成、誤った計算結果 |
+| **A: Anthropomorphization**<br>擬人化 | 意図・思考・感情など人間的な性質をLLMに帰属させること。チャットボットの「私」という一人称や、「推論(reasoning)」「エージェント的(agentic)」といった呼称を含む | 一人称で応答するチャットボットにより利用者がチャットボットを過度に信頼する。利用者が読み飛ばす定型的な免責表示 |
+| **N: Non-explainability**<br>説明不可能性 | LLMがなぜその出力をしたのかを説明することが難しい。選考・判断・診断などに用いる場合に特に問題となる | 応募者を選んだ理由を説明できない履歴書スクリーニング、判断根拠が示されない経費の承認 |
+| **T: Training issues**<br>学習データの問題 | 学習データの品質問題やポイズニングなど、偶発的・意図的な学習データの問題。LLMの利用者は学習データを変更できないが、モデル選定時に考慮できる | 特定のフレーズで特定の振る舞いを引き起こす意図的なポイズニング、低品質なインターネット上のコンテンツの混入 |
+| **O: Over-reliance on the LLM**<br>LLMへの過度な依存 | 安価・高速である、あるいは責任を転嫁できるといった理由で、監督なしにLLMの出力を受け入れる | レビューされないプレスリリース、テストせずにリリースされるAI生成コード、root権限や広範なネットワーク・認証情報アクセスを持たせたモデルの実行 |
+| **M: Missing security engineering**<br>セキュリティエンジニアリングの欠如 | LLMによって増幅されるセキュリティ・プライバシー・エンジニアリング上の不備全般を扱う包括的カテゴリ。拙速なリリースや「バイブコーディング」が悪化要因として挙げられている | 脅威モデリングなど標準的なセキュア開発プラクティスを経ずにLLM機能をリリースする |
+| **B: Biases**<br>バイアス | 性別・人種・文化などに関するLLM出力の偏り。誤った回答、風評被害、法的リスクにつながる | 取締役会の画像が特定の属性の人物のみで描かれる、性別により偏った採用判断 |
+
+### STRIDEとの関係
+
+PHANTOM-Bは、STRIDEを置き換えるものではなく、STRIDEと**併用する**ことを前提としたSTRIDE類似のニーモニックです。
+
+- **STRIDE**はシステム全体を対象とする汎用的な視点。(ズームレンズに相当)
+- **PHANTOM-B**はスコープにLLMやチャットボットが含まれる場合に用いる、LLMの振る舞いに特化した視点。(単焦点レンズに相当)
+
+### 方法：PHANTOM-Bによる脅威モデリング手順
+
+ここでは、ホワイトペーパーで示されている手順を説明します。
+
+#### 手順1：DFDによるシステムのモデル化
+
+- STRIDEと同様に、DFDでシステムを表現する。(ホワイトペーパーでは、クライアント、フロントエンド、LLMランタイム、Hugging Face から取得したモデル重みで構成される例が示されている)
+- LLMに関わる部分にはPHANTOM-Bを、それ以外の部分にはSTRIDEを適用する。
+
+#### 手順2：LLM/チャットボット要素ごとの脅威列挙
+
+- 各LLM・チャットボット要素に対して、8つのカテゴリに沿った以下の9つの問いを投げかけ、問題がどのように現れるかを探す。
+- カテゴリは脅威を厳密に分類する「箱」ではなく、発想を促す「問い」として用いる。個々の脅威が1つのカテゴリにきれいに収まらなくてもよい。
+
+ホワイトペーパーで示されている9つの問いは以下のとおりです。
+
+1. **P**：どうすればプロンプトインジェクションが可能か?
+2. **H**：ハルシネーションが想定を超えたらどうなるか?
+3. **A**：LLMを擬人化していないか?
+4. **N**：いつ、誰に対して、出力を説明・正当化する必要があるか?
+5. **T**：学習データに偶発的または意図的な品質問題があったらどうなるか?
+6. **O**：LLMはどのような判断を行い、何に対してどのような制御権を持っているか。それにより意図せず攻撃面が拡大していないか?(「エージェント型AI」のデプロイパターンでは特に重要)
+7. **M**：脅威モデリングを含め、SDL(セキュア開発ライフサイクル)のその他のセキュリティエンジニアリングを適切に実施したか?
+8. **-**：LLMがアクセスできるデータ、および情報が開示され得る先を制御できているか?
+9. **B**：LLMにはどのようなバイアスがあり、それはこのユースケースにおいて許容できるか?
+
+
+### PHANTOM-Bの対象外
+
+ホワイトペーパーでは、以下を対象外としています。
+
+- **防御策・管理策・緩和策**：別の資料で扱われており、また脅威よりも変化が速いため。
+- **LLMを学習させる側への脅威**：対象はLLMを呼び出して利用する側のため。
+- **学術的な網羅性**：実務での使いやすさを優先しているため。
+- **リスク評価**：スコアリングや評価の方法は示されていないため。
+
+そのため、本ドキュメントにおけるPHANTOM-Bの適用では、原著どおり脅威の列挙までを対象とし、緩和策の検討およびリスク評価は行っていません。
 
 ### 参考資料
 1. Microsoft Corporation, Uncover Security Design Flaws Using The STRIDE Approach | Microsoft Learn, https://learn.microsoft.com/en-us/archive/msdn-magazine/2006/november/uncover-security-design-flaws-using-the-stride-approach (2026年3月28日 取得)
@@ -236,3 +302,5 @@ MAESTROの特徴として、単一のレイヤーだけでなく、レイヤー�
 1. IEEE, Tutorial #1: Modeling Threats to ML Models with STRIDE-AI &#8211; 2025 IEEE 9th Forum on Research and Technologies for Society and Industry Innovation (RTSI), https://2025.ieee-rtsi.org/modeling-threats-to-ml-models-with-stride-ai/ (2026年3月28日 取得)
 1. Cloud Security Alliance., Agentic AI Threat Modeling Framework: MAESTRO | CSA, https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro (2026年3月28日 取得)
 1. OWASP Foundation, Inc., Agentic AI - OWASP Lists Threats and Mitigations, https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/ (2026年3月28日 取得)
+1. Adam Shostack (Shostack + Associates), PHANTOM-B: A STRIDE Analog for LLMs (White Paper #6, July 2026), https://shostack.org/files/papers/PHANTOM-B_Whitepaper_Shostack.pdf (2026年10月14日 取得)
+1. Shostack + Associates, Why PHANTOM-B?, https://shostack.org/blog/why-phantom-b/ (2026年10月14日 取得)
