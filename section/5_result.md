@@ -1,5 +1,5 @@
 # 評価結果
-3名1チームの構成で計3チームにおいて、各チームで3種類のモデルに対してSTRIDE、STRIDE+AI及びMAESTROの手法を用いて評価を行い、その結果を収集し分析しました。
+3名1チームの構成で計3チームにおいて、各チームで3種類のモデルに対してSTRIDE、STRIDE+AI、MAESTRO及びPHANTOM-Bの手法を用いて評価を行い、その結果を収集し分析しました。
 
 ## 評価データ詳細
 評価データの詳細は、下記の通りです。
@@ -8,6 +8,7 @@
 * [STRIDE結果詳細](/section/result/STRIDE_T1.md)
 * [STRIDE＋AI結果詳細](/section/result/STRIDE_AI_T1.md)
 * [MAESTRO結果詳細](/section/result/MAESTRO_T1.md)
+* [PHANTOM-B結果詳細](/section/result/PHANTOM-B_T1.md)
 
 ### チーム2
 * [STRIDE結果詳細](/section/result/STRIDE_T2.md)
