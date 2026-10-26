@@ -20,6 +20,7 @@
 * [STRIDE結果詳細](/section/result/STRIDE_T3.md)
 * [STRIDE＋AI結果詳細](/section/result/STRIDE_AI_T3.md)
 * [MAESTRO結果詳細](/section/result/MAESTRO_T3.md)
+* [PHANTOM-B結果詳細](/section/result/PHANTOM-B_T3.md)
 
 
 ## 実施者の感想
